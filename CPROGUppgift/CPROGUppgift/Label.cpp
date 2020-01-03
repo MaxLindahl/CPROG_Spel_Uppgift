@@ -1,7 +1,13 @@
 #include "Label.h"
-#include <SDL_ttf.h>
 #include "System.h"
 #include <string>
+
+#ifdef __APPLE__
+    #include <SDL2/SDL_ttf.h>
+#elif defined _WIN32 || defined _WIN64
+    #include <SDL_ttf.h>
+#endif
+
 
 using namespace std;
 namespace gameEngine{

@@ -1,7 +1,13 @@
 #ifndef System_h
 #define System_h
-#include <SDL.h>
-#include <SDL_ttf.h>
+
+#ifdef __APPLE__
+    #include <SDL2/SDL.h>
+    #include <SDL2/SDL_ttf.h>
+#elif defined _WIN32 || defined _WIN64
+    #include <SDL.h>
+    #include <SDL_ttf.h>
+#endif
 
 namespace gameEngine {
 

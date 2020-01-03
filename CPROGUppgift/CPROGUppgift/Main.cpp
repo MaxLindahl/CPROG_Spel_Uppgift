@@ -1,5 +1,3 @@
-#include <SDL.h>
-#include "Label.h"
 #include "GameLoop.h"
 
 using namespace gameEngine;
